@@ -1,0 +1,246 @@
+BikeLaneEye Documentation
+=============
+
+.. automodule:: BikeLaneEye
+   :members:
+
+actualiza_t_0
+=============
+
+.. py:function:: actualiza_t_0(self)
+
+   This function updates the value of t_0 in the configuration file.
+
+   :param self: The instance of the class.
+   :type self: object
+
+   :returns: None
+
+   :example:
+
+      >>> actualiza_t_0()
+
+extract_coordinates
+===================
+
+.. py:function:: extract_coordinates(self, event, x, y, flags, parameters)
+
+   Extracts coordinates from mouse events.
+
+   :param event: The type of mouse event.
+   :param x: The x-coordinate of the mouse event.
+   :param y: The y-coordinate of the mouse event.
+   :param flags: Additional flags for the mouse event.
+   :param parameters: Additional parameters for the mouse event.
+
+agregar_frames
+==============
+
+.. py:function:: agregar_frames(valores)
+
+   This function calculates the average of a list of values and rounds it to the nearest whole number.
+
+   :param valores: A list of numerical values.
+   :type valores: list
+
+   :return: The rounded average of the values.
+   :rtype: int
+
+get_detection_data
+===================
+
+.. py:function:: get_detection_data(path)
+
+   This function reads a CSV file from the given path and performs some data manipulation operations on it. It returns the modified DataFrame.
+
+   :param path: The path to the CSV file.
+   :type path: str
+
+   :return: The modified DataFrame.
+   :rtype: pandas.DataFrame
+
+   :example usage:
+
+      >>> df = get_detection_data('path/to/file.csv')
+
+get_counting_events
+====================
+
+.. py:function:: get_counting_events(contador_nombre, contador_línea_tpl, seguimientos, incidencia_mínima, cls_to_idx={0:0, 1:2, 2:4})
+
+   Generates counting events based on the intersection of segments with a counting line and an incidence angle.
+
+   This function iterates through tracked objects and detects when they cross a defined line within a specified range of angles, indicating a counting event. Each event is yielded with detailed information for further processing.
+
+   :param contador_nombre: The name of the counter used to identify the set of events.
+   :type contador_nombre: str
+
+   :param contador_línea_tpl: Starting and ending coordinates of the counting line (x1, y1, x2, y2).
+   :type contador_línea_tpl: tuple
+
+   :param seguimientos: A pandas DataFrame containing the tracks of objects to be counted.
+   :type seguimientos: pandas.DataFrame
+
+   :param incidencia_mínima: The minimum incidence angle required to count a crossing.
+   :type incidencia_mínima: float
+
+   :param cls_to_idx: A dictionary mapping object classes to specific indices. Defaults to {0: 0, 1: 2, 2: 4}.
+   :type cls_to_idx: dict, optional
+
+   :yields: A tuple containing another tuple with frame information and detections, and a second one with tracking details.
+
+increase_brightness
+====================
+
+.. py:function:: increase_brightness(img, value=60)
+
+   Increase the brightness of an image.
+
+   :param img: The input image.
+   :type img: numpy.ndarray
+
+   :param value: The value by which to increase the brightness. Default is 60.
+   :type value: int, optional
+
+   :return: The image with increased brightness.
+   :rtype: numpy.ndarray
+
+prepara_detecciones_1_vídeo
+============================
+
+.. py:function:: prepara_detecciones_1_vídeo(ruta_vídeo)
+
+   Prepares the detections for a given video.
+
+   :param ruta_vídeo: The path to the video file.
+   :type ruta_vídeo: str
+
+   :return: A tuple containing the paths to the video, counters, counts, configuration file, and detection data.
+   :rtype: tuple
+
+   :raises: Warning if the detection file is missing.
+
+   :example:
+
+      >>> prepara_detecciones_1_vídeo('/path/to/video.mp4')
+
+build_counts_df
+===============
+
+.. py:function:: build_counts_df(contador_nombre, contador_linea, detecciones, cola_cruces)
+
+   Builds a DataFrame with counts of different objects detected in each frame.
+
+   :param contador_nombre: The name of the counter.
+   :type contador_nombre: str
+
+   :param contador_linea: The line coordinates of the counter.
+   :type contador_linea: tuple
+
+   :param detecciones: List of detections.
+   :type detecciones: list
+
+   :param cola_cruces: Queue to store crossing events.
+   :type cola_cruces: Queue
+
+   :return: DataFrame with counts of different objects in each frame.
+   :rtype: pandas.DataFrame
+
+   :example usage:
+
+      >>> contador_nombre = "Counter 1"
+      >>> contador_linea = (0, 0, 100, 100)
+      >>> detecciones = [...]
+      >>> cola_cruces = Queue()
+      >>> counts_df = build_counts_df(contador_nombre, contador_linea, detecciones, cola_cruces)
+      >>> print(counts_df)
+
+devuelve_agregados
+==================
+
+.. py:function:: devuelve_agregados(agregación, duración, conteos_df, t_0)
+
+   This function returns aggregated values from a DataFrame based on the given aggregation, duration, DataFrame of counts, and initial time.
+
+   :param agregación: The aggregation interval in seconds.
+   :type agregación: int
+
+   :param duración: The duration in seconds.
+   :type duración: int
+
+   :param conteos_df: The DataFrame containing the counts.
+   :type conteos_df: pandas.DataFrame
+
+   :param t_0: The initial time in seconds.
+   :type t_0: int
+
+   :return: A generator that yields the aggregated values.
+   :rtype: generator
+
+   :example:
+
+      >>> df = pd.DataFrame({'time (s)': [0, 1, 2, 3, 4, 5], 'count': [10, 20, 30, 40, 50, 60]})
+      >>> for value in devuelve_agregados(2, 5, df, 0):
+      ...     print(value)
+
+guarda_resultados_1_vídeo
+==========================
+
+.. py:function:: guarda_resultados_1_vídeo(ruta_conteos, nombres_y_conteos, fps, duración, tubo_cruces_receptor, t_0)
+
+   This function saves the results of a video analysis to an Excel file.
+
+   :param ruta_conteos: The path where the Excel file will be saved.
+   :type ruta_conteos: str
+
+   :param nombres_y_conteos: A list of tuples containing the name of each counter and the corresponding DataFrame with the counts.
+   :type nombres_y_conteos: list
+
+   :param fps: The frames per second of the video.
+   :type fps: int
+
+   :param duración: The duration of the video in seconds.
+   :type duración: float
+
+   :param tubo_cruces_receptor: A connection object for receiving the crossings DataFrame.
+   :type tubo_cruces_receptor: multiprocessing.Connection
+
+   :param t_0: The starting time of the video in seconds.
+   :type t_0: float
+
+salva_resultados_vídeo
+=======================
+
+.. py:function:: salva_resultados_vídeo(ruta_contadores, contadores, ruta_conteos, conteos, cola_cruces, fps, duración, tubo_cruces_receptor, t_0)
+
+   This function saves the results of a video analysis to a file in Excel format.
+
+   :param ruta_contadores: The path to the file where the counters will be saved.
+   :type ruta_contadores: str
+
+   :param contadores: A dictionary containing the counters to be saved. The keys are the names of the counters and the values are the counter components.
+   :type contadores: dict
+
+   :param ruta_conteos: The path to the file where the counts will be saved.
+   :type ruta_conteos: str
+
+   :param conteos: A dictionary containing the counts to be saved. The keys are the names of the counters and the values are the count results.
+   :type conteos: dict
+
+   :param cola_cruces: A queue used for inter-process communication.
+   :type cola_cruces: Queue
+
+   :param fps: The frames per second of the video.
+   :type fps: float
+
+   :param duración: The duration of the video in seconds.
+   :type duración: float
+
+   :param tubo_cruces_receptor: A pipe used for inter-process communication.
+   :type tubo_cruces_receptor: multiprocessing.Pipe
+
+   :param t_0: The starting time of the video.
+   :type t_0: float
+
+   :returns: None
+

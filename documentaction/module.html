@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BikeLaneEye Documentation &#8212; BikeLaneEye  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">BikeLaneEye  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">BikeLaneEye Documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="bikelaneeye-documentation">
+<h1>BikeLaneEye Documentation<a class="headerlink" href="#bikelaneeye-documentation" title="Link to this heading">¶</a></h1>
+</section>
+<section id="actualiza-t-0">
+<h1>actualiza_t_0<a class="headerlink" href="#actualiza-t-0" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="actualiza_t_0">
+<span class="sig-name descname"><span class="pre">actualiza_t_0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#actualiza_t_0" title="Link to this definition">¶</a></dt>
+<dd><p>This function updates the value of t_0 in the configuration file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>self</strong> (<em>object</em>) – The instance of the class.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">actualiza_t_0</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="extract-coordinates">
+<h1>extract_coordinates<a class="headerlink" href="#extract-coordinates" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="extract_coordinates">
+<span class="sig-name descname"><span class="pre">extract_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#extract_coordinates" title="Link to this definition">¶</a></dt>
+<dd><p>Extracts coordinates from mouse events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong> – The type of mouse event.</p></li>
+<li><p><strong>x</strong> – The x-coordinate of the mouse event.</p></li>
+<li><p><strong>y</strong> – The y-coordinate of the mouse event.</p></li>
+<li><p><strong>flags</strong> – Additional flags for the mouse event.</p></li>
+<li><p><strong>parameters</strong> – Additional parameters for the mouse event.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="agregar-frames">
+<h1>agregar_frames<a class="headerlink" href="#agregar-frames" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="agregar_frames">
+<span class="sig-name descname"><span class="pre">agregar_frames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">valores</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agregar_frames" title="Link to this definition">¶</a></dt>
+<dd><p>This function calculates the average of a list of values and rounds it to the nearest whole number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>valores</strong> (<em>list</em>) – A list of numerical values.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rounded average of the values.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="get-detection-data">
+<h1>get_detection_data<a class="headerlink" href="#get-detection-data" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="get_detection_data">
+<span class="sig-name descname"><span class="pre">get_detection_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_detection_data" title="Link to this definition">¶</a></dt>
+<dd><p>This function reads a CSV file from the given path and performs some data manipulation operations on it. It returns the modified DataFrame.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – The path to the CSV file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The modified DataFrame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+<dt class="field-even">Example usage<span class="colon">:</span></dt>
+<dd class="field-even"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">get_detection_data</span><span class="p">(</span><span class="s1">&#39;path/to/file.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="get-counting-events">
+<h1>get_counting_events<a class="headerlink" href="#get-counting-events" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="get_counting_events">
+<span class="sig-name descname"><span class="pre">get_counting_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contador_nombre</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contador_línea_tpl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seguimientos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incidencia_mínima</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls_to_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{0:</span> <span class="pre">0,</span> <span class="pre">1:</span> <span class="pre">2,</span> <span class="pre">2:</span> <span class="pre">4}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_counting_events" title="Link to this definition">¶</a></dt>
+<dd><p>Generates counting events based on the intersection of segments with a counting line and an incidence angle.</p>
+<p>This function iterates through tracked objects and detects when they cross a defined line within a specified range of angles, indicating a counting event. Each event is yielded with detailed information for further processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>contador_nombre</strong> (<em>str</em>) – The name of the counter used to identify the set of events.</p></li>
+<li><p><strong>contador_línea_tpl</strong> (<em>tuple</em>) – Starting and ending coordinates of the counting line (x1, y1, x2, y2).</p></li>
+<li><p><strong>seguimientos</strong> (<em>pandas.DataFrame</em>) – A pandas DataFrame containing the tracks of objects to be counted.</p></li>
+<li><p><strong>incidencia_mínima</strong> (<em>float</em>) – The minimum incidence angle required to count a crossing.</p></li>
+<li><p><strong>cls_to_idx</strong> (<em>dict</em><em>, </em><em>optional</em>) – A dictionary mapping object classes to specific indices. Defaults to {0: 0, 1: 2, 2: 4}.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing another tuple with frame information and detections, and a second one with tracking details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="increase-brightness">
+<h1>increase_brightness<a class="headerlink" href="#increase-brightness" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="increase_brightness">
+<span class="sig-name descname"><span class="pre">increase_brightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#increase_brightness" title="Link to this definition">¶</a></dt>
+<dd><p>Increase the brightness of an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – The input image.</p></li>
+<li><p><strong>value</strong> (<em>int</em><em>, </em><em>optional</em>) – The value by which to increase the brightness. Default is 60.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The image with increased brightness.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="prepara-detecciones-1-video">
+<h1>prepara_detecciones_1_vídeo<a class="headerlink" href="#prepara-detecciones-1-video" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="prepara_detecciones_1_video">
+<span class="sig-name descname"><span class="pre">prepara_detecciones_1_vídeo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ruta_vídeo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prepara_detecciones_1_video" title="Link to this definition">¶</a></dt>
+<dd><p>Prepares the detections for a given video.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ruta_vídeo</strong> (<em>str</em>) – The path to the video file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the paths to the video, counters, counts, configuration file, and detection data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p>Warning if the detection file is missing.</p>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prepara_detecciones_1_vídeo</span><span class="p">(</span><span class="s1">&#39;/path/to/video.mp4&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="build-counts-df">
+<h1>build_counts_df<a class="headerlink" href="#build-counts-df" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="build_counts_df">
+<span class="sig-name descname"><span class="pre">build_counts_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contador_nombre</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contador_linea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detecciones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cola_cruces</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#build_counts_df" title="Link to this definition">¶</a></dt>
+<dd><p>Builds a DataFrame with counts of different objects detected in each frame.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>contador_nombre</strong> (<em>str</em>) – The name of the counter.</p></li>
+<li><p><strong>contador_linea</strong> (<em>tuple</em>) – The line coordinates of the counter.</p></li>
+<li><p><strong>detecciones</strong> (<em>list</em>) – List of detections.</p></li>
+<li><p><strong>cola_cruces</strong> (<em>Queue</em>) – Queue to store crossing events.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame with counts of different objects in each frame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+<dt class="field-even">Example usage<span class="colon">:</span></dt>
+<dd class="field-even"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">contador_nombre</span> <span class="o">=</span> <span class="s2">&quot;Counter 1&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">contador_linea</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">detecciones</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cola_cruces</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">counts_df</span> <span class="o">=</span> <span class="n">build_counts_df</span><span class="p">(</span><span class="n">contador_nombre</span><span class="p">,</span> <span class="n">contador_linea</span><span class="p">,</span> <span class="n">detecciones</span><span class="p">,</span> <span class="n">cola_cruces</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">counts_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="devuelve-agregados">
+<h1>devuelve_agregados<a class="headerlink" href="#devuelve-agregados" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="devuelve_agregados">
+<span class="sig-name descname"><span class="pre">devuelve_agregados</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agregación</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duración</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conteos_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#devuelve_agregados" title="Link to this definition">¶</a></dt>
+<dd><p>This function returns aggregated values from a DataFrame based on the given aggregation, duration, DataFrame of counts, and initial time.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>agregación</strong> (<em>int</em>) – The aggregation interval in seconds.</p></li>
+<li><p><strong>duración</strong> (<em>int</em>) – The duration in seconds.</p></li>
+<li><p><strong>conteos_df</strong> (<em>pandas.DataFrame</em>) – The DataFrame containing the counts.</p></li>
+<li><p><strong>t_0</strong> (<em>int</em>) – The initial time in seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A generator that yields the aggregated values.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>generator</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;time (s)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">devuelve_agregados</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="guarda-resultados-1-video">
+<h1>guarda_resultados_1_vídeo<a class="headerlink" href="#guarda-resultados-1-video" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="guarda_resultados_1_video">
+<span class="sig-name descname"><span class="pre">guarda_resultados_1_vídeo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ruta_conteos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nombres_y_conteos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duración</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tubo_cruces_receptor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#guarda_resultados_1_video" title="Link to this definition">¶</a></dt>
+<dd><p>This function saves the results of a video analysis to an Excel file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ruta_conteos</strong> (<em>str</em>) – The path where the Excel file will be saved.</p></li>
+<li><p><strong>nombres_y_conteos</strong> (<em>list</em>) – A list of tuples containing the name of each counter and the corresponding DataFrame with the counts.</p></li>
+<li><p><strong>fps</strong> (<em>int</em>) – The frames per second of the video.</p></li>
+<li><p><strong>duración</strong> (<em>float</em>) – The duration of the video in seconds.</p></li>
+<li><p><strong>tubo_cruces_receptor</strong> (<em>multiprocessing.Connection</em>) – A connection object for receiving the crossings DataFrame.</p></li>
+<li><p><strong>t_0</strong> (<em>float</em>) – The starting time of the video in seconds.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="salva-resultados-video">
+<h1>salva_resultados_vídeo<a class="headerlink" href="#salva-resultados-video" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="salva_resultados_video">
+<span class="sig-name descname"><span class="pre">salva_resultados_vídeo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ruta_contadores</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contadores</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ruta_conteos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conteos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cola_cruces</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duración</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tubo_cruces_receptor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#salva_resultados_video" title="Link to this definition">¶</a></dt>
+<dd><p>This function saves the results of a video analysis to a file in Excel format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ruta_contadores</strong> (<em>str</em>) – The path to the file where the counters will be saved.</p></li>
+<li><p><strong>contadores</strong> (<em>dict</em>) – A dictionary containing the counters to be saved. The keys are the names of the counters and the values are the counter components.</p></li>
+<li><p><strong>ruta_conteos</strong> (<em>str</em>) – The path to the file where the counts will be saved.</p></li>
+<li><p><strong>conteos</strong> (<em>dict</em>) – A dictionary containing the counts to be saved. The keys are the names of the counters and the values are the count results.</p></li>
+<li><p><strong>cola_cruces</strong> (<em>Queue</em>) – A queue used for inter-process communication.</p></li>
+<li><p><strong>fps</strong> (<em>float</em>) – The frames per second of the video.</p></li>
+<li><p><strong>duración</strong> (<em>float</em>) – The duration of the video in seconds.</p></li>
+<li><p><strong>tubo_cruces_receptor</strong> (<em>multiprocessing.Pipe</em>) – A pipe used for inter-process communication.</p></li>
+<li><p><strong>t_0</strong> (<em>float</em>) – The starting time of the video.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">BikeLaneEye Documentation</a></li>
+<li><a class="reference internal" href="#actualiza-t-0">actualiza_t_0</a><ul>
+<li><a class="reference internal" href="#actualiza_t_0"><code class="docutils literal notranslate"><span class="pre">actualiza_t_0()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#extract-coordinates">extract_coordinates</a><ul>
+<li><a class="reference internal" href="#extract_coordinates"><code class="docutils literal notranslate"><span class="pre">extract_coordinates()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#agregar-frames">agregar_frames</a><ul>
+<li><a class="reference internal" href="#agregar_frames"><code class="docutils literal notranslate"><span class="pre">agregar_frames()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#get-detection-data">get_detection_data</a><ul>
+<li><a class="reference internal" href="#get_detection_data"><code class="docutils literal notranslate"><span class="pre">get_detection_data()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#get-counting-events">get_counting_events</a><ul>
+<li><a class="reference internal" href="#get_counting_events"><code class="docutils literal notranslate"><span class="pre">get_counting_events()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#increase-brightness">increase_brightness</a><ul>
+<li><a class="reference internal" href="#increase_brightness"><code class="docutils literal notranslate"><span class="pre">increase_brightness()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#prepara-detecciones-1-video">prepara_detecciones_1_vídeo</a><ul>
+<li><a class="reference internal" href="#prepara_detecciones_1_video"><code class="docutils literal notranslate"><span class="pre">prepara_detecciones_1_vídeo()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#build-counts-df">build_counts_df</a><ul>
+<li><a class="reference internal" href="#build_counts_df"><code class="docutils literal notranslate"><span class="pre">build_counts_df()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#devuelve-agregados">devuelve_agregados</a><ul>
+<li><a class="reference internal" href="#devuelve_agregados"><code class="docutils literal notranslate"><span class="pre">devuelve_agregados()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#guarda-resultados-1-video">guarda_resultados_1_vídeo</a><ul>
+<li><a class="reference internal" href="#guarda_resultados_1_video"><code class="docutils literal notranslate"><span class="pre">guarda_resultados_1_vídeo()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#salva-resultados-video">salva_resultados_vídeo</a><ul>
+<li><a class="reference internal" href="#salva_resultados_video"><code class="docutils literal notranslate"><span class="pre">salva_resultados_vídeo()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/module.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">BikeLaneEye  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">BikeLaneEye Documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Andres Rodriguez, Juan Benavente, Maira Delgado-Lindeman, Borja Alonso.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
